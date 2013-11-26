@@ -1,0 +1,17 @@
+#! /usr/bin/env bash
+
+TUNNEL_CMD=`/usr/bin/which tunnels`
+RVM_CMD=`/usr/bin/which rvmsudo`
+
+if [ -z "$TUNNEL_CMD" ]; then
+  echo 'Tunnels not installed'
+  echo 'gem install tunnels'
+  exit 1
+fi
+
+if [ -z "$RVM_CMD" ]; then
+  echo 'RVM not installed'
+  exit 1
+fi
+
+rvmsudo $TUNNEL_CMD
