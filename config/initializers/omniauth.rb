@@ -5,3 +5,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     :idp_cert_fingerprint               => ENV['SAML_IDP_CERT_FINGERPRINT'],
     :name_identifier_format             => ENV['SAML_IDP_NAME_FORMAT']
 end
+
+OmniAuth.config.logger = Rails.logger
