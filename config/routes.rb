@@ -1,5 +1,6 @@
 SamlClient::Application.routes.draw do
   get  '/auth/failure'       => 'sessions#failure'
+  get  '/auth/saml/metadata' => 'sessions#metadata'
   post '/auth/saml/callback' => 'sessions#create'
 
   root 'application#index'
