@@ -1,0 +1,4 @@
+export SAML_IDP_ISSUER=onelogin
+export SAML_IDP_TARGET_URL=https://app.onelogin.com/trust/saml2/http-post/sso/342922
+export SAML_IDP_CERT_FINGERPRINT=96:9E:B2:2E:FE:23:19:69:3B:02:58:16:25:DC:2C:27:F8:27:A1:FC
+export SAML_IDP_NAME_FORMAT=urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress

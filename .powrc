@@ -1,3 +1,7 @@
+# source the correct IDP
+# source scripts/onelogin_env
+source scripts/local_idp_env
+
 # DO NOT EDIT - correctly loads RVM
 # detect `$rvm_path`
 if [ -z "${rvm_path:-}" ] && [ -x "${HOME:-}/.rvm/bin/rvm" ]
