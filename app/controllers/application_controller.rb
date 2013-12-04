@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    redirect_to '/auth/saml'
+    redirect_to '/auth/saml' # to test omni-auth-saml
+    #redirect_to '/saml' # to test ruby-saml
   end
 end
