@@ -1,4 +1,5 @@
 export SAML_IDP_ISSUER=waterfall-saml-client
 export SAML_IDP_TARGET_URL=http://saml-idp.dev/saml/auth
-export SAML_IDP_CERT_FINGERPRINT=9E:65:2E:03:06:8D:80:F2:86:C7:6C:77:A1:D9:14:97:0A:4D:F4:4D
+#export SAML_IDP_CERT_FINGERPRINT=9E:65:2E:03:06:8D:80:F2:86:C7:6C:77:A1:D9:14:97:0A:4D:F4:4D
+export SAML_IDP_CERT_FINGERPRINT=74:51:A0:EE:40:A5:B3:D9:6F:1C:23:8D:59:04:81:8A:4B:12:F5:FF
 export SAML_IDP_NAME_FORMAT=urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
