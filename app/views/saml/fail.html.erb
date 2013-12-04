@@ -1,0 +1,13 @@
+<h1>Auth failed</h1>
+
+<%= @exception.inspect %><br>
+Supplied Digest: <%= @response.document.supplied_digest.inspect %><br>
+Calculated Digest: <%= @response.document.calculated_digest.inspect %><br>
+
+<hr>
+
+<%= @response.document.canon_elements.inspect %>
+
+<hr>
+
+<%= @response.response.inspect %>
