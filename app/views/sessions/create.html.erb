@@ -1,7 +1,11 @@
-<%= params.inspect %>
+<h1>Login successful</h1>
 
-<br>
-<br>
+Provider: <%= auth_hash.provider %><br>
+Uid: <%= auth_hash.uid %><br>
+Creds <%= auth_hash.credentials.to_hash.inspect %><br>
+Info: <%= auth_hash.info.to_hash.inspect %><br>
+Raw: <%= auth_hash.extra.to_hash.inspect %><br>
+
 <hr>
 
 <%= auth_hash.inspect %>
