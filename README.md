@@ -1,6 +1,6 @@
 # Intro
 
-This is a reference implmentation of a basic Waterfall Rails stack.  It intends to connect with an SAML IdP in order to do login and exchange standard User info.
+This is a reference implementation of a basic SAML SP.  It intends to connect with an SAML IdP in order to do login and exchange standard User info.
 
 # Terms
 
@@ -12,19 +12,6 @@ This is a reference implmentation of a basic Waterfall Rails stack.  It intends 
 1. Service Provider
     1. A known and trusted entity that sends assertions
     
-# Why not OAuth
-
-SAML is a HTTP based protocol that wraps a directory of users and permissions.  Only part of the protocol is concerns with Single Sign-on.
-
-OAuth, on the otherhand, only aims to solve the Single Sign-on problem and it does so by decentralizing login.
-
-From a Service Provider point of view, the end goal is nearly identical: user come to a site, is redirected to sign-in elsewhere, is redirected back with secure data, the data is cached, and access is granted.  The only difference is where the redirects are made, what and how the data is transfered, and how many hand-offs are made.  But is you understand one you basically understand both.
-
-With OAuth there is usually a paywall which causes users to self-select out of services that they do not use.  In the corporate settings, since there is no user paywall, this is done arbitrarily with roles and permissons.
-
-Therefore, they differ in their approach to user management.  OAuth empowers users to control their information, and which sites have access to what information.  SAML empowser corporate entites (made up of any number of users) to contral their information as well as the information of subordinants (users), and also to grant powers.  SAML does this by wraping the time tested Directory (ActiveDirectory, LDAP) model, with an OAuth like protocol that can be used Cross Domains.
-
-
 # SAML IdP setup
 
 An IdP is loaded via a set of ENV settings.  See `/scripts/local_ipd_env` for an example.
@@ -45,8 +32,6 @@ If you are not already logged in then you will be redirected to the IdP to signi
 
 All subsequent calls to the app will simply use the already stored session.
 
-## Session logout
+# Session Note
 
-With SAML each service provider has their own login session.  When you are redirected to the IdP and login there you get an IdP session.
-
-## IdP logout
+This app does not store session.  This is on purpose.
