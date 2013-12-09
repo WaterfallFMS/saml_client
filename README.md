@@ -34,4 +34,4 @@ All subsequent calls to the app will simply use the already stored session.
 
 # Session Note
 
-This app does not store session.  This is on purpose.
+This app does not store session.  This is on purpose.  It allows you to open the root URL and perform login again.
